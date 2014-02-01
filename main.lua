@@ -28,9 +28,10 @@ end
 ------------------------------------------------------ GRAPHICS
 
 function love.draw()
-    love.graphics.print(love.timer.getFPS(), 10, 10)
-    --love.graphics.line(l.w.getWidth()/2, l.w.getHeight()/2, l.mouse.getX(), l.mouse.getY())
     map.draw()
+    love.graphics.print(love.timer.getFPS(), 10, 10)
+    love.graphics.print(math.floor(cam.x) .. ' ' .. math.floor(cam.y), 10, 24)
+    love.graphics.print(math.floor(player.x) .. ' ' .. math.floor(player.y), 10, 38)
 end
 
 

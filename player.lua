@@ -56,9 +56,9 @@ end
 
 function player.draw()
     l.gs.setColor(255,255,255)
-    l.gs.circle('line', player.x+map.x, player.y+map.y, 20, 20)
+    l.gs.circle('line', player.x, player.y, 20, 20)
     if player.moving then
-        map.line(player.x, player.y, player.dx, player.dy)
-        map.print(player.dist_from_dest(), player.dx, player.dy)
+        l.gs.line(player.x, player.y, player.dx, player.dy)
+        l.gs.print(player.dist_from_dest(), player.dx, player.dy)
     end
 end
