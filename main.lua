@@ -58,4 +58,3 @@ function love.quit()
                   "ODg1IGj-82GuiBjozJcgcJH4iEw~",
                   love.timer.getTime()-love.init_time)
 end
-

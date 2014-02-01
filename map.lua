@@ -15,6 +15,8 @@ function map.update(dt)
 end
 
 function map.draw()
+    cam.x = -l.gs.getWidth()/2+player.x
+    cam.y = -l.gs.getHeight()/2+player.y
     pcall(l.gs.push)
     l.gs.translate(-cam.x, -cam.y)
     player.draw()
@@ -26,4 +28,3 @@ end
 function map.click(x, y)
     player.goto(x+cam.x, y+cam.y)
 end
-
